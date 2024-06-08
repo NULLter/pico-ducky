@@ -136,9 +136,9 @@ payload4Pin = digitalio.DigitalInOut(GP11)
 payload4Pin.switch_to_input(pull=digitalio.Pull.UP)
 
 def getProgrammingStatus():
-    # check GP0 for setup mode
+    # check GP1 for setup mode
     # see setup mode for instructions
-    progStatusPin = digitalio.DigitalInOut(GP0)
+    progStatusPin = digitalio.DigitalInOut(GP1)
     progStatusPin.switch_to_input(pull=digitalio.Pull.UP)
     progStatus = not progStatusPin.value
     return(progStatus)
